@@ -2,9 +2,6 @@ import { createTheme } from '@mui/material/styles'
 
 // Create a theme instance.
 const theme = createTheme({
-  typography: {
-    fontFamily: ['Roboto', 'Sukhumvit Set'].join(','),
-  },
   components: {
     MuiButton: {
       defaultProps: {
@@ -77,56 +74,8 @@ const theme = createTheme({
         },
       },
     },
-    // MuiTableHead: {
-    //   styleOverrides: {
-    //     root: {
-    //       // backgroundColor: '#F3F4F6',
-    //       // backgroundColor: '#FFFFFF',
-    //       backgroundColor: '#F9FAFC',
-    //       '.MuiTableCell-root': {
-    //         color: '#374151',
-    //       },
-    //       borderBottom: 'none',
-    //       '& .MuiTableCell-root': {
-    //         borderBottom: 'none',
-    //         fontSize: '12px',
-    //         fontWeight: 600,
-    //         lineHeight: 1,
-    //         letterSpacing: 0.5,
-    //         textTransform: 'uppercase',
-    //       },
-    //       '& .MuiTableCell-paddingCheckbox': {
-    //         paddingTop: 4,
-    //         paddingBottom: 4,
-    //       },
-    //     },
-    //   },
-    // },
-    // MuiTableRow: {
-    //   styleOverrides: {
-    //     root: {
-    //       // '&:nth-of-type(odd)': {
-    //       //   backgroundColor: 'white',
-    //       // },
-    //       '&:nth-of-type(even)': {
-    //         backgroundColor: '#F9FAFC',
-    //       },
-    //     },
-    //   },
-    // },
   },
   palette: {
-    // neutral: {
-    //   100: '#F3F4F6',
-    //   200: '#E5E7EB',
-    //   300: '#D1D5DB',
-    //   400: '#9CA3AF',
-    //   500: '#6B7280',
-    //   600: '#4B5563',
-    //   700: '#374151',
-    //   800: '#1F2937',
-    //   900: '#111827'
-    // },
     action: {
       active: '#6B7280',
       focus: 'rgba(55, 65, 81, 0.12)',
@@ -216,8 +165,7 @@ const theme = createTheme({
     button: {
       fontWeight: 600,
     },
-    fontFamily:
-      '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
+    fontFamily: ['Roboto', 'Sukhumvit Set'].join(','),
     body1: {
       fontSize: '1rem',
       fontWeight: 400,
