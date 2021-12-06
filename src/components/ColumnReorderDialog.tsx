@@ -21,7 +21,7 @@ import Typography from '@mui/material/Typography'
 import dynamic from 'next/dynamic'
 import { reorder } from '../shared/libs'
 import { styled } from '@mui/material/styles'
-import { useSharedContext } from '../src/context/SharedContext'
+import { useSharedContext } from '../context/SharedContext'
 
 const DraggableList = dynamic(() => import('./DraggableList'), { ssr: false })
 

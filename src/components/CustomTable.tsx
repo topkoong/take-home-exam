@@ -27,12 +27,14 @@ import { EditToolbarProps } from '../shared/types'
 import IconButton from '@mui/material/IconButton'
 import { LicenseInfo } from '@mui/x-data-grid-pro'
 import SaveIcon from '@mui/icons-material/Save'
-import { randomId } from '@mui/x-data-grid-generator'
-import { useSharedContext } from '../src/context/SharedContext'
+import { useSharedContext } from '../context/SharedContext'
+import { v1 as uuidv1 } from 'uuid'
 
 LicenseInfo.setLicenseKey(
   'x0jTPl0USVkVZV0SsMjM1kDNyADM5cjM2ETPZJVSQhVRsIDN0YTM6IVREJ1T0b9586ef25c9853decfa7709eee27a1e',
 )
+
+const randomId = () => uuidv1()
 
 function CustomToolbar(props: EditToolbarProps) {
   const { apiRef } = props
@@ -146,7 +148,8 @@ export default function CustomTable() {
       : col.field === 'updatedAt'
       ? {
           ...col,
-          renderCell: (params: { value: any }) => `${params.value} น.`,
+          renderCell: (params: { value: any }) =>
+            !params.value ? '-' : `${params.value} น.`,
         }
       : col.field === 'actions'
       ? {
@@ -157,12 +160,14 @@ export default function CustomTable() {
             if (isInEditMode) {
               return [
                 <GridActionsCellItem
+                  key={id}
                   icon={<SaveIcon />}
                   label="Save"
                   onClick={handleSaveClick(id)}
                   color="primary"
                 />,
                 <GridActionsCellItem
+                  key={id}
                   icon={<CancelIcon />}
                   label="Cancel"
                   className="textPrimary"
@@ -174,6 +179,7 @@ export default function CustomTable() {
 
             return [
               <GridActionsCellItem
+                key={id}
                 icon={<EditIcon />}
                 label="Edit"
                 className="textPrimary"
@@ -181,6 +187,7 @@ export default function CustomTable() {
                 color="inherit"
               />,
               <GridActionsCellItem
+                key={id}
                 icon={<DeleteIcon />}
                 label="Delete"
                 onClick={handleDeleteClick(id)}

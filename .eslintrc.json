@@ -8,15 +8,19 @@
     },
     "project": "./tsconfig.json"
   },
-  "plugins": ["@typescript-eslint", "react/recommended", "prettier"],
+  "plugins": ["@emotion", "@typescript-eslint", "react", "prettier"],
   "extends": [
-    "plugin:@typescript-eslint/recommended",
-    "next/core-web-vitals",
     "next",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
   "rules": {
-    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/display-name": [0, { "ignoreTranspilerName": true }],
+    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+    "import/no-cycle": [0, { "ignoreExternal": true }],
     "import/order": [
       1,
       {
@@ -38,5 +42,18 @@
         "alphabetize": { "order": "asc", "caseInsensitive": true }
       }
     ]
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
   }
 }

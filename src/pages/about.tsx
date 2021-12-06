@@ -3,9 +3,9 @@ import * as React from 'react'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Container from '@mui/material/Container'
-import Copyright from '../src/Copyright'
-import Link from '../src/Link'
-import ProTip from '../src/ProTip'
+import Copyright from '../Copyright'
+import Link from '../Link'
+import ProTip from '../ProTip'
 import Typography from '@mui/material/Typography'
 
 export default function About() {

@@ -1,11 +1,11 @@
-/* eslint-disable react/display-name */
 import * as React from 'react'
 
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 
-import createEmotionCache from '../src/createEmotionCache'
+import createEmotionCache from '../createEmotionCache'
+/* eslint-disable react/display-name */
 import createEmotionServer from '@emotion/server/create-instance'
-import theme from '../src/theme'
+import theme from '../theme'
 
 export default class MyDocument extends Document {
   render() {

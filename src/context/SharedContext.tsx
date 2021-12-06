@@ -1,10 +1,10 @@
-import { Data, SharedContext } from '../../shared/types'
+import { Data, SharedContext } from '../shared/types'
 import { GridColumns, GridEnrichedColDef } from '@mui/x-data-grid-pro'
 import { ReactNode, createContext, useContext, useState } from 'react'
 
-import initialState from '../../shared/constants'
-import { mockTableColumns } from '../../data/mockColumns'
-import mockTableRows from '../../data/mockData.json'
+import initialState from '../shared/constants'
+import { mockTableColumns } from '../data/mockColumns'
+import mockTableRows from '../data/mockData.json'
 
 const AppContext = createContext<SharedContext>(initialState)
 
@@ -25,11 +25,11 @@ export function AppWrapper({ children }: Props) {
     setTableColumns(columns)
   }
   const removeTableColumn = (field: string) => {
-    let updatedTableCols = tableColumns.filter((r) => r.field !== field)
+    const updatedTableCols = tableColumns.filter((r) => r.field !== field)
     setTableColumns(updatedTableCols)
   }
   const addTableColumn = (col: GridEnrichedColDef) => {
-    let updatedTableCols = [...tableColumns, col]
+    const updatedTableCols = [...tableColumns, col]
     setTableColumns(updatedTableCols)
   }
 

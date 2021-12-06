@@ -7,7 +7,7 @@ import { GridEnrichedColDef } from '@mui/x-data-grid-pro'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
-import { useSharedContext } from '../src/context/SharedContext'
+import { useSharedContext } from '../context/SharedContext'
 
 export type DraggableListItemProps = {
   item: GridEnrichedColDef

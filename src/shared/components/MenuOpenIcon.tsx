@@ -9,8 +9,8 @@ const MenuOpenIcon: FC = () => (
     xmlns="http://www.w3.org/2000/svg">
     <g opacity="0.5">
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M7 2V0H25V2H7ZM7 7H25V5H7V7ZM7 12H25V10H7V12Z"
         fill="white"
       />

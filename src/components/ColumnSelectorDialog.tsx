@@ -12,7 +12,7 @@ import List from '@mui/material/List'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemText from '@mui/material/ListItemText'
 import { styled } from '@mui/material/styles'
-import { useSharedContext } from '../src/context/SharedContext'
+import { useSharedContext } from '../context/SharedContext'
 
 export interface ColumnDialogProps {
   open: boolean
