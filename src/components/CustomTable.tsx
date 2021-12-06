@@ -5,6 +5,7 @@ import {
   GridEnrichedColDef,
   GridEventListener,
   GridEvents,
+  GridRowId,
   GridRowParams,
   GridToolbarColumnsButton,
   GridToolbarContainer,
@@ -154,8 +155,7 @@ export default function CustomTable() {
       : col.field === 'actions'
       ? {
           ...col,
-          /* eslint-disable  @typescript-eslint/no-explicit-any */
-          getActions: ({ id }) => {
+          getActions: ({ id }: { id: any }) => {
             const isInEditMode = apiRef.current.getRowMode(id) === 'edit'
 
             if (isInEditMode) {
