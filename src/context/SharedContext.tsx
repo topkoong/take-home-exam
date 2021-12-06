@@ -19,7 +19,7 @@ type Props = {
 export function AppWrapper({ children }: Props) {
   const [tableColumns, setTableColumns] =
     useState<GridColumns>(mockTableColumns)
-  const [tableRows, setTableRows] = useState<Data[]>(mockTableRows)
+  const [tableRows] = useState<Data[]>(mockTableRows)
 
   const updateTableColumn = (columns: GridColumns) => {
     setTableColumns(columns)
