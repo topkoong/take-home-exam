@@ -13,32 +13,6 @@ export const mockTableColumnSelector: TableColumnInfo[] = [
   { id: 'Telephone', label: 'Telephone' },
 ]
 
-// export const mockTableColumns: TableColumnInfo[] = [
-//   { id: 'contact', label: 'ผู้ติดต่อ', minWidth: 170 },
-//   { id: 'tel', label: 'เบอร์โทรศัพท์มือถือ', minWidth: 100 },
-//   {
-//     id: 'เบอร์โทรศัพท์มือถือ',
-//     label: 'บริษัท',
-//     minWidth: 170,
-//     // align: 'left',
-//     // format: (value: number) => value.toLocaleString('en-US'),
-//   },
-//   {
-//     id: 'updatedAt',
-//     label: 'ติดต่อล่าสุด',
-//     minWidth: 170,
-//     // align: 'left',
-//     format: (value: number) => value.toLocaleString('en-US'),
-//   },
-//   {
-//     id: 'action',
-//     label: '',
-//     minWidth: 170,
-//     align: 'right',
-//     format: (value: number) => value.toFixed(2),
-//   },
-// ]
-
 export const mockTableColumns: GridColumns = [
   {
     field: 'contact',
