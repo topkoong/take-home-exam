@@ -1,5 +1,9 @@
 # Developing JigsawGroups assignment app
 
+### Link to the demo video.
+
+[Here's the link to the demo.](https://take-home-exam.vercel.app/)
+
 # Getting started
 
 ## Setting Up the Environment and tools needed
