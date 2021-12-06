@@ -11,6 +11,7 @@ import {
   GridToolbarDensitySelector,
   GridToolbarExport,
   GridToolbarFilterButton,
+  LicenseInfo,
   MuiEvent,
   useGridApiRef,
 } from '@mui/x-data-grid-pro'
@@ -25,7 +26,6 @@ import DeleteIcon from '@mui/icons-material/DeleteOutlined'
 import EditIcon from '@mui/icons-material/Edit'
 import { EditToolbarProps } from '../shared/types'
 import IconButton from '@mui/material/IconButton'
-import { LicenseInfo } from '@mui/x-data-grid-pro'
 import SaveIcon from '@mui/icons-material/Save'
 import { useSharedContext } from '../context/SharedContext'
 import { v1 as uuidv1 } from 'uuid'
@@ -68,24 +68,24 @@ export default function CustomTable() {
   const apiRef = useGridApiRef()
   const { tableRows, tableColumns } = useSharedContext()
   const [pageSize, setPageSize] = useState<number>(25)
-  const [page, setPage] = useState<number>(0)
+  const [, setPage] = useState<number>(0)
 
   const handleRowEditStart = (
-    params: GridRowParams,
+    _params: GridRowParams,
     event: MuiEvent<React.SyntheticEvent>,
   ) => {
     event.defaultMuiPrevented = true
   }
 
   const handleRowEditStop: GridEventListener<GridEvents.rowEditStop> = (
-    params,
+    _params,
     event,
   ) => {
     event.defaultMuiPrevented = true
   }
 
   const handleCellFocusOut: GridEventListener<GridEvents.cellFocusOut> = (
-    params,
+    _params,
     event,
   ) => {
     event.defaultMuiPrevented = true
@@ -115,7 +115,7 @@ export default function CustomTable() {
     apiRef.current.setRowMode(id, 'view')
 
     const row = apiRef.current.getRow(id)
-    if (row!.isNew) {
+    if (row?.isNew) {
       apiRef.current.updateRows([{ id, _action: 'delete' }])
     }
   }
@@ -154,6 +154,7 @@ export default function CustomTable() {
       : col.field === 'actions'
       ? {
           ...col,
+          /* eslint-disable  @typescript-eslint/no-explicit-any */
           getActions: ({ id }) => {
             const isInEditMode = apiRef.current.getRowMode(id) === 'edit'
 

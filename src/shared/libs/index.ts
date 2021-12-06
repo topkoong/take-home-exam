@@ -8,7 +8,6 @@ export const createData = (
   updatedAt: string,
   action?: any,
 ): Data => ({ contact, tel, company, updatedAt, action })
-// const d = new Date('3 march 2021 20:21:44')
 
 export const createData2 = (
   contact: string,
