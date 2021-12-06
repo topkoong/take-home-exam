@@ -5,7 +5,6 @@ import {
   GridEnrichedColDef,
   GridEventListener,
   GridEvents,
-  GridRowId,
   GridRowParams,
   GridToolbarColumnsButton,
   GridToolbarContainer,
